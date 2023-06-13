@@ -136,6 +136,16 @@ function SumSquares(l){
   return tot
 }
 
+
+function replicate(times, number) {
+  if (times <= 0) return []
+  
+  return [number, ...replicate(times-1, number)]
+}
+replicate(3, 5) // Output: [5, 5, 5]
+replicate(2, 7) // Output: [7, 7]
+
+
 module.exports = {
   product,
   longest,
